@@ -40,7 +40,7 @@ export default defineComponent({
       filterCategoriesId: 0,
 
       page: 1,
-      productsPerPage: 19,
+      productsPerPage: 9,
     }
   },
 })
