@@ -97,6 +97,7 @@ products = products.sort(function (a, b) {
     return 0;
 });
 
+console.log(products.length);
 export default products;
 
 

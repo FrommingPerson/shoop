@@ -1,5 +1,6 @@
 <script>
 import {defineComponent} from 'vue'
+// import eventBus from "@/eventBus";
 
 export default defineComponent({
   name: "ProductItem2",
@@ -9,6 +10,11 @@ export default defineComponent({
       colour: "#73B6EA"
     }
   },
+  methods: {
+    // gotoPage(pageNumbers, pageParams) {
+    //   eventBus.$emit("gotoPage", pageNumbers, pageNumbers);
+    // }
+  }
 })
 </script>
 
@@ -16,7 +22,7 @@ export default defineComponent({
   <ul class="catalog__list">
     <li class="catalog__item">
       <!--        "v-bind:key" there is for determining element from array by means of index it's require because solve problems with determining the certain element of array-->
-      <a class="catalog__pic" href="#">
+      <a class="catalog__pic" href="#" @click.prevent="$emit('gotoPage', 'product', {id: products.id})">
         <img :src="products.path_to_img" :alt="products.title">
       </a>
 
@@ -57,6 +63,4 @@ export default defineComponent({
   </ul>
 </template>
 
-<style scoped>
 
-</style>
